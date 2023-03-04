@@ -11,7 +11,7 @@
 import json
 
 telephone_man = {'id': '', 'name': '', 'first_name': '', 'number': ''}
-file = '8_python_homework_lesson_eight/telephone_directory.json'
+file = 'telephone_directory.json'
 
 with open(file) as file_load:
    g_list = json.load(file_load)
