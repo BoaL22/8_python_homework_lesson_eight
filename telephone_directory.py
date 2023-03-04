@@ -30,8 +30,11 @@ def see_contact():
 
       command_see = input('Вывести \n\tвесь справочник - all\n\tотдельный контакт - one\n')
       if command_see == 'all':
-         for man in lst:
-            print(f"{man['id']} {man['name'].title()} {man['first_name'].title()} - {man['number']}")
+         if len(lst) == 0:
+            print('Справочник пуст! ')
+         else:
+            for man in lst:
+               print(f"{man['id']} {man['name'].title()} {man['first_name'].title()} - {man['number']}")
 
       elif command_see == 'one':
          glob_search()
